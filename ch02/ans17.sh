@@ -1,0 +1,1 @@
+cut -f 1 -d$'\t' popular-names.txt | LANG=C sort | uniq
