@@ -1,3 +1,4 @@
-# 文字列”stressed”の文字を逆に（末尾から先頭に向かって）並べた文字列を得よ．
+# Obtain the string that arranges letters of the string “stressed” in reverse order (tail to head).
+
 text = "stressed"
 print(text[::-1])
