@@ -1,12 +1,14 @@
-# 引数x, y, zを受け取り「x時のyはz」という文字列を返す関数を実装せよ．
-# さらに，x=12, y=”気温”, z=22.4として，実行結果を確認せよ．
+# Implement a function that receives arguments, x, y, and z and returns a string
+#  “{y} is {z} at {x}”, where “{x}”, “{y}”, and “{z}” denote the values of x, y, and z, 
+# respectively. In addition, confirm the return string by giving the arguments x=12, y="temperature", 
+# and z=22.4.
 
-def generate_text(x, y, z):
-    #return f'{x}時の{y}は{z}'
-    return '{}時の{}は{}'.format(x, y, z)
+def template_based_sentence_generation(x, y, z):
+    return f'{x}時の{y}は{z}'
+    #return '{}時の{}は{}'.format(x, y, z)
 
 x = 12
 y = "気温"
 z = 22.4
 
-print(generate_text(x, y, z))
+print(template_based_sentence_generation(x, y, z))
