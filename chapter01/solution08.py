@@ -1,10 +1,10 @@
 """
-与えられた文字列の各文字を，以下の仕様で変換する関数cipherを実装せよ．
+Implement a function cipher that converts a given string with the specification:
 
-英小文字ならば(219 - 文字コード)の文字に置換
-その他の文字はそのまま出力
-この関数を用い，英語のメッセージを暗号化・復号化せよ．
+ - Every alphabetical lowercase letter c is converted to a letter whose ASCII code is (219 - [the ASCII code of c])
+ - Keep other letters unchanged
 
+Use this function to cipher and decipher an English message.
 """
 def cipher(s: str) -> str:
     # 変換後の文字列を格納する変数
