@@ -1,3 +1,4 @@
-#「パタトクカシーー」という文字列の1,3,5,7文字目を取り出して連結した文字列を得よ．
-text = 'パタトクカシーー'
+# Obtain the string that concatenates the 1st, 3rd, 5th, and 7th letters in the string “schooled”.
+
+text = "schooled"
 print(text[::2])
