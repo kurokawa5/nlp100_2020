@@ -1,8 +1,11 @@
-# “Now I need a drink, alcoholic of course, after the heavy lectures involving quantum mechanics.”という文を単語に分解し，
-# 各単語の（アルファベットの）文字数を先頭から出現順に並べたリストを作成せよ．
-# (1) コンマ(,)、ピリオド(.)を置換し、文を単語に分割する
-# (2) 各単語の文字数をカウントする
-text = 'Now I need a drink, alcoholic of course, after the heavy lectures involving quantum mechanics.'
-text = text.replace('.', '').replace(',', '')
-ans = [len(word) for word in text.split()]
+# Split the sentence “Now I need a drink, alcoholic of course, after the heavy lectures involving quantum mechanics”.
+# into words, and create a list whose element presents the number of alphabetical letters in the corresponding word.
+
+# (1) コンマ(,)、ピリオド(.)を置換する
+# (2) 文を単語に分割する
+# (3) 各単語の文字数をカウントする
+
+original_text = "Now I need a drink, alcoholic of course, after the heavy lectures involving quantum mechanics."
+replaced_text = original_text.replace('.', '').replace(',', '')
+ans = [len(word) for word in replaced_text.split()]
 print(ans)
