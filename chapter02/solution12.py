@@ -1,6 +1,6 @@
-# 各行の1列目だけを抜き出したものをcol1.txtに，
-# 2列目だけを抜き出したものをcol2.txtとしてファイルに保存せよ．確認にはcutコマンドを用いよ．
-
+# Extract the value of the first column of each line, and store the output into col1.txt.
+# Extract the value of the second column of each line, and store the output into col2.txt.
+# Confirm the result by using cut command.
 import pandas as pd
 
 df = pd.read_csv('chapter02/popular-names.txt', sep='\t', header=None)
