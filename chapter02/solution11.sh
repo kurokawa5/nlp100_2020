@@ -1,1 +1,1 @@
-expand -t 1 popular-names.txt
+expand -t 1 popular-names.txt | head -n5 
