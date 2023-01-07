@@ -1,8 +1,9 @@
-# 自然数Nをコマンドライン引数などの手段で受け取り，入力のうち末尾のN行だけを表示せよ．確認にはtailコマンドを用いよ．
+# Receive a natural number $N$ from a command-line argument, and output the last $N$ lines of the file.
+# Confirm the result by using tail command.
 
 import sys
-import fire
 import pandas as pd
+import fire
 
 if len(sys.argv) == 1:
     print('Set arg n, like "python chapter02/solution15.py 5"')
