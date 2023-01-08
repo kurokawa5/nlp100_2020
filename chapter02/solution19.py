@@ -1,6 +1,5 @@
-# 各行の1列目の文字列の出現頻度を求め，その高い順に並べて表示せよ．
-# 確認にはcut, uniq, sortコマンドを用いよ．
-
+# Find the frequency of a string in the first column, and sort the strings by descending order of their frequencies.
+# Confirm the result by using cut, uniq, and sort commands.
 import pandas as pd
 
 df = pd.read_csv('chapter02/popular-names.txt', sep='\t', header=None)
