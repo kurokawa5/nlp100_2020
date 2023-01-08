@@ -1,1 +1,1 @@
-sort -r -k2 -t $'\t' popular-names.txt
+sort -r -k3 -t $'\t' popular-names.txt | head -n5
