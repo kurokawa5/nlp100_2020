@@ -1,1 +1,1 @@
-cut -f 1 -d $'\t' popular-names.txt | LANG=C sort | uniq -c | sort -r -k 2 -t ' '
+cut -f 1 -d $'\t' popular-names.txt | LANG=C sort | uniq -c | sort -r -k 1 -t ' '
