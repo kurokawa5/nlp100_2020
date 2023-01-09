@@ -4,9 +4,9 @@ import pandas as pd
 import re
 
 df_j = pd.read_json('chapter03/jawiki-country.json.gz', lines=True, compression='infer')
-uk_text = df_j.query('title=="イギリス"')['text'].values[0]
+text_uk = df_j.query('title=="イギリス"')['text'].values[0]
 
-for file in re.findall(r'\[\[(ファイル|File):([^]|]+?)(\|.*?)+\]\]', uk_text):
-    print(file[1])
+media = re.findall(r'\[\[ファイル:(.+?)(?:\|.+)*\]\]', text_uk)
 
-#for m in re.finditer(r'\[\[(?:File|ファイル):([^\[\]|]+)(?:\|[^\[\]]+)?(.*)\]\]', uk_text):
+for file in media:
+    print(file)
