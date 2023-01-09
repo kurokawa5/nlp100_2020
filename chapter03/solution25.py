@@ -1,18 +1,12 @@
-# 記事中に含まれる「基礎情報」テンプレートのフィールド名と値を抽出し，辞書オブジェクトとして格納せよ．
-
+# Extract field names and their values in the Infobox “country”, and store them in a dictionary object.
 import pandas as pd
 import re
 
 df_j = pd.read_json('chapter03/jawiki-country.json.gz', lines=True, compression='infer')
-uk_text = df_j.query('title=="イギリス"')['text'].values[0]
-uk_texts = uk_text.split('\n')
+text_uk = df_j.query('title=="イギリス"')['text'].values[0]
 
-pattern = re.compile(r'\|(.+?)\s=\s*(.+)')
-ans = {}
-for line in uk_texts:
-    r = re.search(pattern, line)
-    if r:
-        ans[r[1]] = r[2]
-        #print(r[2])
-        #print(ans[r[1]])
-print(ans)
+template_text = re.findall(r'\{\{基礎情報 (.+?^}\})', text_uk, re.MULTILINE+re.DOTALL)[0]
+template = dict(re.findall("\|(.+?) *= *(.+?)\n(?=\||})", template_text, re.MULTILINE+re.DOTALL))
+
+for t in template:
+    print(t, template[t])
