@@ -1,4 +1,4 @@
-# Extract the longest noun phrase consisting of consecutive nouns.
+# Obtain the list of words and frequencies of their occurrences sorted by descending order of frequency.
 import itertools
 from collections import Counter
 from collections import defaultdict
