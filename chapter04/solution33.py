@@ -14,7 +14,7 @@ def parse_mecab(block):
         }
         res.append(lineDict)
 
-def extract_base(block):
+def extract_anob(block):
     res = []
     for i, word in enumerate(block):
         if word["surface"] == "の":
@@ -33,5 +33,5 @@ with open(filename, mode='rt', encoding='utf-8') as f:
 
 filtered_blocks = list(filter(lambda x: x != '', blocks))
 parse_blocks = [parse_mecab(block) for block in filtered_blocks]
-parse_blocks = [extract_base(block) for block in parse_blocks]
+parse_blocks = [extract_anob(block) for block in parse_blocks]
 print(parse_blocks[11:13])
