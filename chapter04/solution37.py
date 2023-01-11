@@ -1,4 +1,6 @@
-# Visualize the top-ten frequent words and their frequencies with a chart (e.g., bar chart).
+# Extract the list of words that co-occur with the word “Alice”. Visualize with a chart
+#  (e.g., bar chart) the top-ten words co-occurring with the word “Alice” and their frequencies.
+# In the Japanese version, it is a cat, not Alice.
 import itertools
 from collections import Counter
 from collections import defaultdict
