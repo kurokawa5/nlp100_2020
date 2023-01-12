@@ -32,6 +32,5 @@ with open(filename, mode='rt', encoding='utf-8') as f:
     blocks = f.read().split('EOS\n')
 blocks = list(filter(lambda x: x != '', blocks))
 blocks = [parse_cabocha(block) for block in blocks]
-print(blocks[1])
-#for m in blocks[1]:
-#    print(vars(m))
+for m in blocks[1]:
+    print(vars(m))
