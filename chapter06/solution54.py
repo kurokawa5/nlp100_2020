@@ -1,5 +1,5 @@
-# Use the logistic regression model from the problem 52. Create a program that predicts
-# the category of a given news headline and computes the prediction probability of the model.
+# Compute the accuracy score of the logistic regression model
+# from the problem 52 on both the training data and the test data.
 import pandas as pd
 import numpy as np
 import re
