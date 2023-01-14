@@ -18,11 +18,6 @@ def preprocessing(data):
 
     return x,y
 
-def score(model, X):
-    pred = model.predict([X])
-    pred_proba = model.predict_proba([X])[0, pred]
-    return pred[0], pred_proba[0]
-
 np.random.seed(123)
 df = pd.read_csv("chapter06/NewsAggregatorDataset/newsCorpora.csv", header=None, sep="\t", names=["ID", "TITLE", "URL", "PUBLISHER", "CATEGORY", "STORY", "HOSTNAME", "TIMESTAMP"])
 df = df.loc[df["PUBLISHER"].isin(["Reuters", "Huffington Post", "Businessweek", "Contactmusic.com", "Daily Mail"]), ["TITLE", "CATEGORY"]]
@@ -46,6 +41,3 @@ X_test = tfidfvectorizer.transform(X_test).toarray()
 
 model = LogisticRegression()
 model.fit(X_train, Y_train)
-
-for i in range(20):
-    print(score(model, X_test[i]))
